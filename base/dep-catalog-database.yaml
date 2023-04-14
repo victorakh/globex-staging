@@ -53,9 +53,16 @@ spec:
           protocol: TCP
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/lib/pgsql/data
+          name: catalog-data
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
       serviceAccount: catalog-app
       serviceAccountName: catalog-app
       terminationGracePeriodSeconds: 30
+      volumes:
+      - name: catalog-data
+        persistentVolumeClaim:
+          claimName: catalog-database
