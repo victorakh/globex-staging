@@ -58,7 +58,7 @@ spec:
           name: inventory-data
           subPath: pgdata
         - mountPath: /var/lib/pgsql/data
-          name: catalog-data
+          name: inventory-data
           subPath: userdata
       dnsPolicy: ClusterFirst
       restartPolicy: Always
