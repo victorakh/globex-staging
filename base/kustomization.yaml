@@ -32,3 +32,5 @@ resources:
 - svc-inventory.yaml
 - svc-order-placement.yaml
 - svc-recommendation-engine.yaml
+- pvc-catalog-database.yaml
+- pvc-inventory-database.yaml
