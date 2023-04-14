@@ -29,6 +29,17 @@ spec:
         app.kubernetes.io/name: catalog
         app.kubernetes.io/part-of: globex-app
     spec:
+      initContainers:
+        - terminationMessagePath: /dev/termination-log
+          name: permission-init
+          command:
+            - sh
+            - '-c'
+            - (chmod -R 777 /var/lib/pgsql/data)
+          volumeMounts:
+            - name: catalog-data
+              mountPath: /var/lib/pgsql/data
+          image: 'alpine:3.16.0'
       containers:
       - env:
         - name: POSTGRESQL_USER
