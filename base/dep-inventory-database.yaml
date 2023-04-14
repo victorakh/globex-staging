@@ -27,8 +27,6 @@ spec:
         app.kubernetes.io/name: inventory-database
         app.kubernetes.io/part-of: globex-app
     spec:
-      securityContext:
-        fsGroup: 1001
       containers:
       - env:
         - name: POSTGRESQL_USER
@@ -58,8 +56,6 @@ spec:
         volumeMounts:
         - mountPath: /var/lib/pgsql/data
           name: inventory-data
-        securityContext:
-          runAsUser: 1001
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
