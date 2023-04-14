@@ -35,7 +35,7 @@ spec:
             - '-c'
             - (chmod -R 777 /var/lib/pgsql/data)
           volumeMounts:
-            - name: catalog-data
+            - name: inventory-data
               mountPath: /var/lib/pgsql/data
           image: 'alpine:3.16.0'
       containers:
