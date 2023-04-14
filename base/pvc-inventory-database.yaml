@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   labels:
-    app: inventory
+    app: globex
     template: postgresql-persistent-template
   name: inventory-database
 spec:

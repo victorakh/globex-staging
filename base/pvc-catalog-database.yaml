@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   labels:
-    app: catalog
+    app: globex
     template: postgresql-persistent-template
   name: catalog-database
 spec:
