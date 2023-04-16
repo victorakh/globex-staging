@@ -27,16 +27,16 @@ spec:
         app.kubernetes.io/name: inventory-database
         app.kubernetes.io/part-of: globex-app
     spec:
-      # initContainers:
-      # - name: permission-init
-      #   image: alpine:3.16.0
-      #   command:
-      #   - sh
-      #   - -c
-      #   - (chmod -R 777 /var/lib/pgsql/data)
-      #   volumeMounts:
-      #     - name: inventory-data
-      #       mountPath: /var/lib/pgsql/data
+      initContainers:
+      - name: permission-init
+        image: alpine:3.16.0
+        command:
+        - sh
+        - -c
+        - (chmod -R 777 /var/lib/pgsql/data)
+        volumeMounts:
+          - name: inventory-data
+            mountPath: /var/lib/pgsql/data
       containers:
       - env:
         - name: POSTGRESQL_USER
