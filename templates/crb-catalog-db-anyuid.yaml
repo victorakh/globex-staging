@@ -1,10 +1,10 @@
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: 'system:openshift:scc:anyuid-inventory'
+  name: 'system:openshift:scc:anyuid-catalog'
 subjects:
   - kind: ServiceAccount
-    name: inventory-app
+    name: catalog-app
     namespace: {{ $.Values.globex.namespace }}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
