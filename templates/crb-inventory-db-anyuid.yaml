@@ -5,7 +5,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: inventory-app
-    namespace: {{ $.Values.sonarqube.adminPassword }}
+    namespace: {{ $.Values.globex.namespace }}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
