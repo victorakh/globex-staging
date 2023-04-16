@@ -1,0 +1,4 @@
+#Sonarqube Chart Values
+
+globex:
+  namespace: globex
