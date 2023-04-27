@@ -3,5 +3,6 @@ kind: ServiceAccount
 metadata:
   labels:
     app.kubernetes.io/instance: globex-app
-    app.kubernetes.io/part-of: inventory-app
+    app.kubernetes.io/name: catalog-database
+    app.kubernetes.io/part-of: globex-app
   name: inventory-app
