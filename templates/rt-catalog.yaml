@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Route
 metadata:
-  annotations:
-    openshift.io/host.generated: "true"
+#  annotations:
+#    openshift.io/host.generated: "true"
   labels:
     app.kubernetes.io/instance: globex-app
     app.kubernetes.io/name: catalog
