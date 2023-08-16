@@ -3,11 +3,11 @@ kind: PersistentVolumeClaim
 metadata:
   labels:
     app: globex
-    template: postgresql-persistent-template
-  name: inventory-database
+  name: catalog-database
 spec:
   accessModes:
-  - ReadWriteOnce
+    - ReadWriteOnce
   resources:
     requests:
       storage: 5Gi
+  storageClassName: nfs-sc
