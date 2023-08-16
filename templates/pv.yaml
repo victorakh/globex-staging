@@ -1,0 +1,30 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-database
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    path: /share/pv-database
+    server: 34.16.156.86
+  storageClassName: nfs-sc
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-catalog
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    path: /share/pv-catalog
+    server: 34.16.156.86
+  storageClassName: nfs-sc
+
