@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/name: catalog-database
     app.kubernetes.io/part-of: globex-app
     app.kubernetes.io/version: 1.0.0
-    app.openshift.io/runtime: postgresql
+    app.kubernetes.io/runtime: postgresql
   name: catalog-database
 spec:
   replicas: 1
